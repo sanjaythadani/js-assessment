@@ -11,6 +11,9 @@ define(function() {
       //
       // otherwise the function should return the number, or false if no number
       // was provided
+      if (typeof(num) !== 'number' || !isFinite(num))
+        return false;
+      return ((num % 3 ? '' : 'fizz') + (num % 5 ? '' : 'buzz') || num)
     }
   };
 });
