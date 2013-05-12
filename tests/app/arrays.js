@@ -20,7 +20,10 @@ define([
     });
 
     it("you should be able to remove a value from an array", function() {
-      a.push(2); // Make sure the value appears more than one time
+      a.push(2);
+      // Make sure the value appears more than one time
+      expect(a).to.have.length(5);
+
       var result = answers.remove(a, 2);
 
       expect(result).to.have.length(3);
